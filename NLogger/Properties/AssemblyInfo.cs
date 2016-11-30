@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("NLogger")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("n-nakasato")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("NLogger")]
-[assembly: AssemblyCopyright("Copyright © n-nakasato 2016")]
+[assembly: AssemblyCopyright("Copyright © n-nakasato(n.n) 2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace NCore.Value
 {
+    /// <summary>
+    /// 範囲外例外クラス
+    /// 数値型の場合は範囲外、文字列型の場合は文字数範囲外のときに発生する
+    /// Auther:n.n
+    /// </summary>
     public class CRangeErrorException : Exception
     {
         public AGenValue Value;

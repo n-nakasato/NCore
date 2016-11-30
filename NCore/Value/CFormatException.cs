@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace NCore.Value
 {
+    /// <summary>
+    /// フォーマットエラー例外クラス
+    /// 入力チェックで引っかかると発生する
+    /// Auther:n.n
+    /// </summary>
     public class CFormatException : Exception
     {
         public AGenValue Value;

@@ -8,20 +8,21 @@ namespace NCore.StateMachine
 {
     /// <summary>
     /// イベントハンドラの引数
+    /// Auther:n.n
     /// </summary>
     /// 
-    /// <typeparam name="B">
+    /// <typeparam name="EventId">
     /// イベント番号の型
     ///     例：eunm型のEMainTaskEvent
     /// </typeparam>
-    public class CEvent<B>
+    public class CEvent<EventId>
     {
         public ulong MsgNo = 1;
         public readonly string SrcName;
-        public readonly B Id;
+        public readonly EventId Id;
         public object Param;
 
-        public CEvent(string srcName, B id, object param = null)
+        public CEvent(string srcName, EventId id, object param = null)
         {
             this.SrcName = srcName;
             this.Id = id;

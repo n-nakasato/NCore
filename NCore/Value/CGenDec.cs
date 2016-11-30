@@ -9,7 +9,8 @@ using System.Threading.Tasks;
 namespace NCore.Value
 {
     /// <summary>
-    /// decimal型の汎用値
+    /// decimal型の値クラス
+    /// Auther:n.n
     /// </summary>
     public class CGenDec : AGenValue
     {

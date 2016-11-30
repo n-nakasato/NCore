@@ -11,31 +11,33 @@ namespace NCore.StateMachine
 {
     /// <summary>
     /// メッセージ受信ベースのタスククラス
+    /// Auther:n.n
     /// </summary>
-    /// <typeparam name="A">
+    /// <typeparam name="StateId">
     /// 状態番号の型
     ///     例：enum型のEMainTaslState
     /// </typeparam>
-    /// <typeparam name="B">
+    /// <typeparam name="EventId">
     /// イベント番号の型
     ///     例：eunm型のEMainTaskEvent
     /// </typeparam>
-    /// <typeparam name="C">
+    /// <typeparam name="EventHandler">
     /// イベントハンドラのデリゲート
     ///     例：DMainTaskEventHandler
     /// </typeparam>
-    /// <typeparam name="T">
+    /// <typeparam name="StateClass">
     /// 状態オブジェクトの型
-    ///     例：AState<A>を継承したAMainTaskState
+    ///     例：AState<StateId>を継承したAMainTaskState
     /// </typeparam>
-    public abstract class ATask<A, B, C, T> : AStateManager<A, B, C, T>
-        where T : AState<A, B, C>
+    public abstract class ATask<StateId, EventId, EventHandler, StateClass>
+        : AStateManager<StateId, EventId, EventHandler, StateClass>
+        where StateClass : AState<StateId, EventId, EventHandler>
     {
         private Task _Task = null;
         private CancellationTokenSource _Source;
         private CancellationToken _Token;
 
-        private Queue<CEvent<B>> _MsgQueue = new Queue<CEvent<B>>();
+        private Queue<CEvent<EventId>> _MsgQueue = new Queue<CEvent<EventId>>();
 
         private ManualResetEvent _Signal = new ManualResetEvent(false);
 
@@ -93,7 +95,7 @@ namespace NCore.StateMachine
         /// </summary>
         protected void TaskProc()
         {
-            CEvent<B> msgObj = null;
+            CEvent<EventId> msgObj = null;
             bool recv;
 
             while (!this._Token.IsCancellationRequested)
@@ -127,7 +129,7 @@ namespace NCore.StateMachine
         /// メッセージキューにメッセージを設定する
         /// </summary>
         /// <param name="obj"></param>
-        public virtual void SendMsgQueue(CEvent<B> obj)
+        public virtual void SendMsgQueue(CEvent<EventId> obj)
         {
             lock (this._MsgQueue)
             {
@@ -141,7 +143,7 @@ namespace NCore.StateMachine
         /// メッセージキューからメッセージを取得する
         /// </summary>
         /// <returns></returns>
-        protected virtual bool RecvMsgQueue(ref CEvent<B> obj)
+        protected virtual bool RecvMsgQueue(ref CEvent<EventId> obj)
         {
             bool ret;
 

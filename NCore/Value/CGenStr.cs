@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace NCore.Value
 {
+    /// <summary>
+    /// string型の値クラス
+    /// Auther:n.n
+    /// </summary>
     public class CGenStr : AGenValue
     {
         private string _Value = "";

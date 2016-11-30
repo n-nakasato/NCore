@@ -7,6 +7,12 @@ using System.Threading.Tasks;
 
 namespace NCore.Value
 {
+    /// <summary>
+    /// 汎用値クラス
+    /// string型への変換や、入力チェック機能を提供する
+    /// 本クラスを継承して実際の値クラスを作成する
+    /// Auther:n.n
+    /// </summary>
     public abstract class AGenValue : BindableBase
     {
         private string _Id;

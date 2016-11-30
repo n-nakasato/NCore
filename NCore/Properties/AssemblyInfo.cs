@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("NCore")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("n-nakasato")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("NCore")]
-[assembly: AssemblyCopyright("Copyright © n-nakasato 2015")]
+[assembly: AssemblyCopyright("Copyright © n-nakasato(n.n) 2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

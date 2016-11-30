@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace NCore.Value
 {
+    /// <summary>
+    /// bool型の値クラス
+    /// Auther:n.n
+    /// </summary>
     public class CGenBool : AGenValue
     {
         bool _Value = false;

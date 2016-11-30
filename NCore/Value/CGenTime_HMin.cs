@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace NCore.Value
 {
+    /// <summary>
+    /// 時間型(h:min形式)の値クラス
+    /// Auther:n.n
+    /// </summary>
     public class CGenTime_HMin : AGenValue
     {
         private TimeSpan _Value = TimeSpan.Zero;

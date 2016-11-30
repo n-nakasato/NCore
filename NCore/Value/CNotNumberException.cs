@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace NCore.Value
 {
+    /// <summary>
+    /// 非数値例外クラス
+    /// 数値型のクラスで数値以外が入力されたときに発生する
+    /// Auther:n.n
+    /// </summary>
     public class CNotNumberException : Exception
     {
         public CGenDec Value;
